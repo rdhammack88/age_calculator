@@ -1,0 +1,31 @@
+
+/*
+body {
+	text-align: center;
+}
+
+.container-fluid {
+	width: 100%;
+	margin-left: 100px;
+	text-align: center;
+}
+*/
+
+main {
+	width: 95%;
+	margin: auto;
+}
+
+#calculatedAgeContent {
+	height: 200px;
+	text-align: center;
+}
+
+/*
+@media only screen and ( min-width: 480px) {
+	
+	.checkbod {
+		text-align: left;
+	}
+}
+*/
