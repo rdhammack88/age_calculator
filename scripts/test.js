@@ -1,13 +1,40 @@
+
+//var months = document.getElementById('months');
+//var weeks = document.getElementById('weeks');
+//var days = document.getElementById('days');
+//var hours = document.getElementById('hours');
+//var minutes = document.getElementById('minutes');
+//var seconds = document.getElementById('seconds');
+////var monthsAge, weeksAge, daysAge, hoursAge, minutesAge, secondsAge;
+//
+//
+//function calculateAge() {
+//    var age = document.getElementById('age').value;
+//    console.log(age);
+//    
+//    months.innerHTML = "Your age in months is " +  (age * 12);
+//    weeks.innerHTML = "Your age in weeks is " + (age * 52);
+//    days.innerHTML = "Your age in days is " + ((age * 365) - (Math.floor(age/4)));
+//    hours.innerHTML = "Your age in hours is " + (((age * 365) - (Math.floor(age/4))) * 24);
+//    minutes.innerHTML = "Your age in minutes is " + (((age * 365) - (Math.floor(age/4))) * 24 * 60);
+//    seconds.innerHTML = "Your age in seconds is " + (((age * 365) - (Math.floor(age/4))) * 24 * 60 * 60);
+//}
+
 window.onload = function() {
 
-	var calculateBtn = document.getElementById('calculate');
-	
+	//var calculatedAgeText = document.getElementById('calculatedAgeContent').innerTEXT;
 	function calculateAge() {
-		var age = document.getElementById('age').value;		
+		var age = document.getElementById('age').value;
+    //console.log(age);
+		
 		var checkboxValues = document.querySelectorAll('input[type="checkbox"]');
+	console.log(checkboxValues);
 		
 		for( var i = 0; i < checkboxValues.length; i++ ) {
 			if( checkboxValues[i].checked ) {
+//				console.log(checkboxValues[i].value);
+				let checkedAgeCalculation = checkboxValues[i];
+				
 				switch(checkboxValues[i].value) {
 					case 'months':
 						document.getElementById('months').innerHTML = "Your age in months is " +  (age * 12) + "<br/>";
@@ -50,8 +77,27 @@ window.onload = function() {
 						break;
 				}	
 			}
+			
+//			} else if( !checkboxValues[i].checked ) {
+//				document.getElementById('months').innerHTML = '';
+//				document.getElementById('weeks').innerHTML = '';
+//			}
 		}
+		
+		
+		
+		
+		
+		
+		
 	}
 	
+	
+	var calculateBtn = document.getElementById('calculate');
 	calculateBtn.addEventListener('click', calculateAge);
+	
+	
+
+
+	
 }
